@@ -16,7 +16,10 @@ type CalendarAttendee struct {
 	Email        *String    `xmlrpc:"email,omptempty"`
 	EventId      *Many2One  `xmlrpc:"event_id,omptempty"`
 	Id           *Int       `xmlrpc:"id,omptempty"`
+	MailTz       *Selection `xmlrpc:"mail_tz,omptempty"`
 	PartnerId    *Many2One  `xmlrpc:"partner_id,omptempty"`
+	Phone        *String    `xmlrpc:"phone,omptempty"`
+	RecurrenceId *Many2One  `xmlrpc:"recurrence_id,omptempty"`
 	State        *Selection `xmlrpc:"state,omptempty"`
 	WriteDate    *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid     *Many2One  `xmlrpc:"write_uid,omptempty"`

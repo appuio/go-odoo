@@ -6,21 +6,25 @@ import (
 
 // ProductPricelist represents product.pricelist model.
 type ProductPricelist struct {
-	LastUpdate      *Time      `xmlrpc:"__last_update,omptempty"`
-	Active          *Bool      `xmlrpc:"active,omptempty"`
-	CompanyId       *Many2One  `xmlrpc:"company_id,omptempty"`
-	CountryGroupIds *Relation  `xmlrpc:"country_group_ids,omptempty"`
-	CreateDate      *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid       *Many2One  `xmlrpc:"create_uid,omptempty"`
-	CurrencyId      *Many2One  `xmlrpc:"currency_id,omptempty"`
-	DiscountPolicy  *Selection `xmlrpc:"discount_policy,omptempty"`
-	DisplayName     *String    `xmlrpc:"display_name,omptempty"`
-	Id              *Int       `xmlrpc:"id,omptempty"`
-	ItemIds         *Relation  `xmlrpc:"item_ids,omptempty"`
-	Name            *String    `xmlrpc:"name,omptempty"`
-	Sequence        *Int       `xmlrpc:"sequence,omptempty"`
-	WriteDate       *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid        *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate        *Time      `xmlrpc:"__last_update,omptempty"`
+	Active            *Bool      `xmlrpc:"active,omptempty"`
+	Code              *String    `xmlrpc:"code,omptempty"`
+	CompanyId         *Many2One  `xmlrpc:"company_id,omptempty"`
+	CountryGroupIds   *Relation  `xmlrpc:"country_group_ids,omptempty"`
+	CreateDate        *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid         *Many2One  `xmlrpc:"create_uid,omptempty"`
+	CurrencyId        *Many2One  `xmlrpc:"currency_id,omptempty"`
+	DiscountPolicy    *Selection `xmlrpc:"discount_policy,omptempty"`
+	DisplayName       *String    `xmlrpc:"display_name,omptempty"`
+	Id                *Int       `xmlrpc:"id,omptempty"`
+	ItemIds           *Relation  `xmlrpc:"item_ids,omptempty"`
+	Name              *String    `xmlrpc:"name,omptempty"`
+	ProductPricingIds *Relation  `xmlrpc:"product_pricing_ids,omptempty"`
+	Selectable        *Bool      `xmlrpc:"selectable,omptempty"`
+	Sequence          *Int       `xmlrpc:"sequence,omptempty"`
+	WebsiteId         *Many2One  `xmlrpc:"website_id,omptempty"`
+	WriteDate         *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid          *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // ProductPricelists represents array of product.pricelist model.

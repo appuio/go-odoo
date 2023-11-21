@@ -6,14 +6,44 @@ import (
 
 // UtmCampaign represents utm.campaign model.
 type UtmCampaign struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate                   *Time      `xmlrpc:"__last_update,omptempty"`
+	AbTestingCompleted           *Bool      `xmlrpc:"ab_testing_completed,omptempty"`
+	AbTestingMailingsCount       *Int       `xmlrpc:"ab_testing_mailings_count,omptempty"`
+	AbTestingScheduleDatetime    *Time      `xmlrpc:"ab_testing_schedule_datetime,omptempty"`
+	AbTestingTotalPc             *Int       `xmlrpc:"ab_testing_total_pc,omptempty"`
+	AbTestingWinnerSelection     *Selection `xmlrpc:"ab_testing_winner_selection,omptempty"`
+	BouncedRatio                 *Int       `xmlrpc:"bounced_ratio,omptempty"`
+	ClickCount                   *Int       `xmlrpc:"click_count,omptempty"`
+	Color                        *Int       `xmlrpc:"color,omptempty"`
+	CompanyId                    *Many2One  `xmlrpc:"company_id,omptempty"`
+	CreateDate                   *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid                    *Many2One  `xmlrpc:"create_uid,omptempty"`
+	CrmLeadCount                 *Int       `xmlrpc:"crm_lead_count,omptempty"`
+	CurrencyId                   *Many2One  `xmlrpc:"currency_id,omptempty"`
+	DisplayName                  *String    `xmlrpc:"display_name,omptempty"`
+	Id                           *Int       `xmlrpc:"id,omptempty"`
+	InvoicedAmount               *Int       `xmlrpc:"invoiced_amount,omptempty"`
+	IsAutoCampaign               *Bool      `xmlrpc:"is_auto_campaign,omptempty"`
+	IsMailingCampaignActivated   *Bool      `xmlrpc:"is_mailing_campaign_activated,omptempty"`
+	MailingMailCount             *Int       `xmlrpc:"mailing_mail_count,omptempty"`
+	MailingMailIds               *Relation  `xmlrpc:"mailing_mail_ids,omptempty"`
+	Name                         *String    `xmlrpc:"name,omptempty"`
+	OpenedRatio                  *Int       `xmlrpc:"opened_ratio,omptempty"`
+	QuotationCount               *Int       `xmlrpc:"quotation_count,omptempty"`
+	ReceivedRatio                *Int       `xmlrpc:"received_ratio,omptempty"`
+	RepliedRatio                 *Int       `xmlrpc:"replied_ratio,omptempty"`
+	SocialEngagement             *Int       `xmlrpc:"social_engagement,omptempty"`
+	SocialPostIds                *Relation  `xmlrpc:"social_post_ids,omptempty"`
+	SocialPostsCount             *Int       `xmlrpc:"social_posts_count,omptempty"`
+	SocialPushNotificationIds    *Relation  `xmlrpc:"social_push_notification_ids,omptempty"`
+	SocialPushNotificationsCount *Int       `xmlrpc:"social_push_notifications_count,omptempty"`
+	StageId                      *Many2One  `xmlrpc:"stage_id,omptempty"`
+	TagIds                       *Relation  `xmlrpc:"tag_ids,omptempty"`
+	Title                        *String    `xmlrpc:"title,omptempty"`
+	UseLeads                     *Bool      `xmlrpc:"use_leads,omptempty"`
+	UserId                       *Many2One  `xmlrpc:"user_id,omptempty"`
+	WriteDate                    *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                     *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // UtmCampaigns represents array of utm.campaign model.

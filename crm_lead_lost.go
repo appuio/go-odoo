@@ -11,6 +11,7 @@ type CrmLeadLost struct {
 	CreateUid    *Many2One `xmlrpc:"create_uid,omptempty"`
 	DisplayName  *String   `xmlrpc:"display_name,omptempty"`
 	Id           *Int      `xmlrpc:"id,omptempty"`
+	LostFeedback *String   `xmlrpc:"lost_feedback,omptempty"`
 	LostReasonId *Many2One `xmlrpc:"lost_reason_id,omptempty"`
 	WriteDate    *Time     `xmlrpc:"write_date,omptempty"`
 	WriteUid     *Many2One `xmlrpc:"write_uid,omptempty"`

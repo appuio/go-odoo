@@ -6,24 +6,28 @@ import (
 
 // CrmActivityReport represents crm.activity.report model.
 type CrmActivityReport struct {
-	LastUpdate         *Time     `xmlrpc:"__last_update,omptempty"`
-	Active             *Bool     `xmlrpc:"active,omptempty"`
-	AuthorId           *Many2One `xmlrpc:"author_id,omptempty"`
-	CompanyId          *Many2One `xmlrpc:"company_id,omptempty"`
-	CountryId          *Many2One `xmlrpc:"country_id,omptempty"`
-	Date               *Time     `xmlrpc:"date,omptempty"`
-	DisplayName        *String   `xmlrpc:"display_name,omptempty"`
-	Id                 *Int      `xmlrpc:"id,omptempty"`
-	LeadId             *Many2One `xmlrpc:"lead_id,omptempty"`
-	LeadType           *String   `xmlrpc:"lead_type,omptempty"`
-	MailActivityTypeId *Many2One `xmlrpc:"mail_activity_type_id,omptempty"`
-	PartnerId          *Many2One `xmlrpc:"partner_id,omptempty"`
-	Probability        *Float    `xmlrpc:"probability,omptempty"`
-	StageId            *Many2One `xmlrpc:"stage_id,omptempty"`
-	Subject            *String   `xmlrpc:"subject,omptempty"`
-	SubtypeId          *Many2One `xmlrpc:"subtype_id,omptempty"`
-	TeamId             *Many2One `xmlrpc:"team_id,omptempty"`
-	UserId             *Many2One `xmlrpc:"user_id,omptempty"`
+	LastUpdate         *Time      `xmlrpc:"__last_update,omptempty"`
+	Active             *Bool      `xmlrpc:"active,omptempty"`
+	AuthorId           *Many2One  `xmlrpc:"author_id,omptempty"`
+	Body               *String    `xmlrpc:"body,omptempty"`
+	CompanyId          *Many2One  `xmlrpc:"company_id,omptempty"`
+	CountryId          *Many2One  `xmlrpc:"country_id,omptempty"`
+	Date               *Time      `xmlrpc:"date,omptempty"`
+	DateClosed         *Time      `xmlrpc:"date_closed,omptempty"`
+	DateConversion     *Time      `xmlrpc:"date_conversion,omptempty"`
+	DateDeadline       *Time      `xmlrpc:"date_deadline,omptempty"`
+	DisplayName        *String    `xmlrpc:"display_name,omptempty"`
+	Id                 *Int       `xmlrpc:"id,omptempty"`
+	LeadCreateDate     *Time      `xmlrpc:"lead_create_date,omptempty"`
+	LeadId             *Many2One  `xmlrpc:"lead_id,omptempty"`
+	LeadType           *Selection `xmlrpc:"lead_type,omptempty"`
+	MailActivityTypeId *Many2One  `xmlrpc:"mail_activity_type_id,omptempty"`
+	PartnerId          *Many2One  `xmlrpc:"partner_id,omptempty"`
+	StageId            *Many2One  `xmlrpc:"stage_id,omptempty"`
+	SubtypeId          *Many2One  `xmlrpc:"subtype_id,omptempty"`
+	TeamId             *Many2One  `xmlrpc:"team_id,omptempty"`
+	UserId             *Many2One  `xmlrpc:"user_id,omptempty"`
+	WonStatus          *Selection `xmlrpc:"won_status,omptempty"`
 }
 
 // CrmActivityReports represents array of crm.activity.report model.

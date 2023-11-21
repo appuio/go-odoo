@@ -6,21 +6,20 @@ import (
 
 // CrmStage represents crm.stage model.
 type CrmStage struct {
-	LastUpdate     *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate     *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid      *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName    *String   `xmlrpc:"display_name,omptempty"`
-	Fold           *Bool     `xmlrpc:"fold,omptempty"`
-	Id             *Int      `xmlrpc:"id,omptempty"`
-	LegendPriority *String   `xmlrpc:"legend_priority,omptempty"`
-	Name           *String   `xmlrpc:"name,omptempty"`
-	OnChange       *Bool     `xmlrpc:"on_change,omptempty"`
-	Probability    *Float    `xmlrpc:"probability,omptempty"`
-	Requirements   *String   `xmlrpc:"requirements,omptempty"`
-	Sequence       *Int      `xmlrpc:"sequence,omptempty"`
-	TeamId         *Many2One `xmlrpc:"team_id,omptempty"`
-	WriteDate      *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid       *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate   *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate   *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid    *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName  *String   `xmlrpc:"display_name,omptempty"`
+	Fold         *Bool     `xmlrpc:"fold,omptempty"`
+	Id           *Int      `xmlrpc:"id,omptempty"`
+	IsWon        *Bool     `xmlrpc:"is_won,omptempty"`
+	Name         *String   `xmlrpc:"name,omptempty"`
+	Requirements *String   `xmlrpc:"requirements,omptempty"`
+	Sequence     *Int      `xmlrpc:"sequence,omptempty"`
+	TeamCount    *Int      `xmlrpc:"team_count,omptempty"`
+	TeamId       *Many2One `xmlrpc:"team_id,omptempty"`
+	WriteDate    *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid     *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // CrmStages represents array of crm.stage model.

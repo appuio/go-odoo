@@ -6,30 +6,38 @@ import (
 
 // RatingRating represents rating.rating model.
 type RatingRating struct {
-	LastUpdate       *Time      `xmlrpc:"__last_update,omptempty"`
-	AccessToken      *String    `xmlrpc:"access_token,omptempty"`
-	Consumed         *Bool      `xmlrpc:"consumed,omptempty"`
-	CreateDate       *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid        *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName      *String    `xmlrpc:"display_name,omptempty"`
-	Feedback         *String    `xmlrpc:"feedback,omptempty"`
-	Id               *Int       `xmlrpc:"id,omptempty"`
-	MessageId        *Many2One  `xmlrpc:"message_id,omptempty"`
-	ParentResId      *Int       `xmlrpc:"parent_res_id,omptempty"`
-	ParentResModel   *String    `xmlrpc:"parent_res_model,omptempty"`
-	ParentResModelId *Many2One  `xmlrpc:"parent_res_model_id,omptempty"`
-	ParentResName    *String    `xmlrpc:"parent_res_name,omptempty"`
-	PartnerId        *Many2One  `xmlrpc:"partner_id,omptempty"`
-	RatedPartnerId   *Many2One  `xmlrpc:"rated_partner_id,omptempty"`
-	Rating           *Float     `xmlrpc:"rating,omptempty"`
-	RatingImage      *String    `xmlrpc:"rating_image,omptempty"`
-	RatingText       *Selection `xmlrpc:"rating_text,omptempty"`
-	ResId            *Int       `xmlrpc:"res_id,omptempty"`
-	ResModel         *String    `xmlrpc:"res_model,omptempty"`
-	ResModelId       *Many2One  `xmlrpc:"res_model_id,omptempty"`
-	ResName          *String    `xmlrpc:"res_name,omptempty"`
-	WriteDate        *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid         *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate        *Time      `xmlrpc:"__last_update,omptempty"`
+	AccessToken       *String    `xmlrpc:"access_token,omptempty"`
+	Consumed          *Bool      `xmlrpc:"consumed,omptempty"`
+	CreateDate        *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid         *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName       *String    `xmlrpc:"display_name,omptempty"`
+	Feedback          *String    `xmlrpc:"feedback,omptempty"`
+	Id                *Int       `xmlrpc:"id,omptempty"`
+	IsInternal        *Bool      `xmlrpc:"is_internal,omptempty"`
+	MessageId         *Many2One  `xmlrpc:"message_id,omptempty"`
+	ParentRef         *String    `xmlrpc:"parent_ref,omptempty"`
+	ParentResId       *Int       `xmlrpc:"parent_res_id,omptempty"`
+	ParentResModel    *String    `xmlrpc:"parent_res_model,omptempty"`
+	ParentResModelId  *Many2One  `xmlrpc:"parent_res_model_id,omptempty"`
+	ParentResName     *String    `xmlrpc:"parent_res_name,omptempty"`
+	PartnerId         *Many2One  `xmlrpc:"partner_id,omptempty"`
+	PublisherComment  *String    `xmlrpc:"publisher_comment,omptempty"`
+	PublisherDatetime *Time      `xmlrpc:"publisher_datetime,omptempty"`
+	PublisherId       *Many2One  `xmlrpc:"publisher_id,omptempty"`
+	RatedPartnerId    *Many2One  `xmlrpc:"rated_partner_id,omptempty"`
+	RatedPartnerName  *String    `xmlrpc:"rated_partner_name,omptempty"`
+	Rating            *Float     `xmlrpc:"rating,omptempty"`
+	RatingImage       *String    `xmlrpc:"rating_image,omptempty"`
+	RatingImageUrl    *String    `xmlrpc:"rating_image_url,omptempty"`
+	RatingText        *Selection `xmlrpc:"rating_text,omptempty"`
+	ResId             *Many2One  `xmlrpc:"res_id,omptempty"`
+	ResModel          *String    `xmlrpc:"res_model,omptempty"`
+	ResModelId        *Many2One  `xmlrpc:"res_model_id,omptempty"`
+	ResName           *String    `xmlrpc:"res_name,omptempty"`
+	ResourceRef       *String    `xmlrpc:"resource_ref,omptempty"`
+	WriteDate         *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid          *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // RatingRatings represents array of rating.rating model.

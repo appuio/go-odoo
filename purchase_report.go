@@ -7,7 +7,8 @@ import (
 // PurchaseReport represents purchase.report model.
 type PurchaseReport struct {
 	LastUpdate          *Time      `xmlrpc:"__last_update,omptempty"`
-	AccountAnalyticId   *Many2One  `xmlrpc:"account_analytic_id,omptempty"`
+	AvgDaysToPurchase   *Float     `xmlrpc:"avg_days_to_purchase,omptempty"`
+	AvgReceiptDelay     *Float     `xmlrpc:"avg_receipt_delay,omptempty"`
 	CategoryId          *Many2One  `xmlrpc:"category_id,omptempty"`
 	CommercialPartnerId *Many2One  `xmlrpc:"commercial_partner_id,omptempty"`
 	CompanyId           *Many2One  `xmlrpc:"company_id,omptempty"`
@@ -18,20 +19,24 @@ type PurchaseReport struct {
 	Delay               *Float     `xmlrpc:"delay,omptempty"`
 	DelayPass           *Float     `xmlrpc:"delay_pass,omptempty"`
 	DisplayName         *String    `xmlrpc:"display_name,omptempty"`
+	EffectiveDate       *Time      `xmlrpc:"effective_date,omptempty"`
 	FiscalPositionId    *Many2One  `xmlrpc:"fiscal_position_id,omptempty"`
 	Id                  *Int       `xmlrpc:"id,omptempty"`
 	NbrLines            *Int       `xmlrpc:"nbr_lines,omptempty"`
-	Negociation         *Float     `xmlrpc:"negociation,omptempty"`
+	OrderId             *Many2One  `xmlrpc:"order_id,omptempty"`
 	PartnerId           *Many2One  `xmlrpc:"partner_id,omptempty"`
 	PickingTypeId       *Many2One  `xmlrpc:"picking_type_id,omptempty"`
 	PriceAverage        *Float     `xmlrpc:"price_average,omptempty"`
-	PriceStandard       *Float     `xmlrpc:"price_standard,omptempty"`
 	PriceTotal          *Float     `xmlrpc:"price_total,omptempty"`
 	ProductId           *Many2One  `xmlrpc:"product_id,omptempty"`
 	ProductTmplId       *Many2One  `xmlrpc:"product_tmpl_id,omptempty"`
 	ProductUom          *Many2One  `xmlrpc:"product_uom,omptempty"`
+	QtyBilled           *Float     `xmlrpc:"qty_billed,omptempty"`
+	QtyOrdered          *Float     `xmlrpc:"qty_ordered,omptempty"`
+	QtyReceived         *Float     `xmlrpc:"qty_received,omptempty"`
+	QtyToBeBilled       *Float     `xmlrpc:"qty_to_be_billed,omptempty"`
 	State               *Selection `xmlrpc:"state,omptempty"`
-	UnitQuantity        *Float     `xmlrpc:"unit_quantity,omptempty"`
+	UntaxedTotal        *Float     `xmlrpc:"untaxed_total,omptempty"`
 	UserId              *Many2One  `xmlrpc:"user_id,omptempty"`
 	Volume              *Float     `xmlrpc:"volume,omptempty"`
 	Weight              *Float     `xmlrpc:"weight,omptempty"`

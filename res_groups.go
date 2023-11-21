@@ -16,13 +16,17 @@ type ResGroups struct {
 	FullName        *String   `xmlrpc:"full_name,omptempty"`
 	Id              *Int      `xmlrpc:"id,omptempty"`
 	ImpliedIds      *Relation `xmlrpc:"implied_ids,omptempty"`
-	IsPortal        *Bool     `xmlrpc:"is_portal,omptempty"`
 	MenuAccess      *Relation `xmlrpc:"menu_access,omptempty"`
 	ModelAccess     *Relation `xmlrpc:"model_access,omptempty"`
 	Name            *String   `xmlrpc:"name,omptempty"`
+	ParentIds       *Relation `xmlrpc:"parent_ids,omptempty"`
+	RoleCount       *Int      `xmlrpc:"role_count,omptempty"`
+	RoleId          *Relation `xmlrpc:"role_id,omptempty"`
+	RoleIds         *Relation `xmlrpc:"role_ids,omptempty"`
 	RuleGroups      *Relation `xmlrpc:"rule_groups,omptempty"`
 	Share           *Bool     `xmlrpc:"share,omptempty"`
 	TransImpliedIds *Relation `xmlrpc:"trans_implied_ids,omptempty"`
+	TransParentIds  *Relation `xmlrpc:"trans_parent_ids,omptempty"`
 	Users           *Relation `xmlrpc:"users,omptempty"`
 	ViewAccess      *Relation `xmlrpc:"view_access,omptempty"`
 	WriteDate       *Time     `xmlrpc:"write_date,omptempty"`

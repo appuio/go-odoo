@@ -7,6 +7,7 @@ import (
 // MailAlias represents mail.alias model.
 type MailAlias struct {
 	LastUpdate          *Time      `xmlrpc:"__last_update,omptempty"`
+	AliasBouncedContent *String    `xmlrpc:"alias_bounced_content,omptempty"`
 	AliasContact        *Selection `xmlrpc:"alias_contact,omptempty"`
 	AliasDefaults       *String    `xmlrpc:"alias_defaults,omptempty"`
 	AliasDomain         *String    `xmlrpc:"alias_domain,omptempty"`
@@ -16,6 +17,7 @@ type MailAlias struct {
 	AliasParentModelId  *Many2One  `xmlrpc:"alias_parent_model_id,omptempty"`
 	AliasParentThreadId *Int       `xmlrpc:"alias_parent_thread_id,omptempty"`
 	AliasUserId         *Many2One  `xmlrpc:"alias_user_id,omptempty"`
+	CheckSpam           *Bool      `xmlrpc:"check_spam,omptempty"`
 	CreateDate          *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid           *Many2One  `xmlrpc:"create_uid,omptempty"`
 	DisplayName         *String    `xmlrpc:"display_name,omptempty"`

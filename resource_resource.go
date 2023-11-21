@@ -8,15 +8,21 @@ import (
 type ResourceResource struct {
 	LastUpdate     *Time      `xmlrpc:"__last_update,omptempty"`
 	Active         *Bool      `xmlrpc:"active,omptempty"`
+	Avatar128      *String    `xmlrpc:"avatar_128,omptempty"`
 	CalendarId     *Many2One  `xmlrpc:"calendar_id,omptempty"`
+	Color          *Int       `xmlrpc:"color,omptempty"`
 	CompanyId      *Many2One  `xmlrpc:"company_id,omptempty"`
 	CreateDate     *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid      *Many2One  `xmlrpc:"create_uid,omptempty"`
 	DisplayName    *String    `xmlrpc:"display_name,omptempty"`
+	EmployeeId     *Relation  `xmlrpc:"employee_id,omptempty"`
+	FlexibleHours  *Bool      `xmlrpc:"flexible_hours,omptempty"`
 	Id             *Int       `xmlrpc:"id,omptempty"`
 	Name           *String    `xmlrpc:"name,omptempty"`
 	ResourceType   *Selection `xmlrpc:"resource_type,omptempty"`
+	RoleIds        *Relation  `xmlrpc:"role_ids,omptempty"`
 	TimeEfficiency *Float     `xmlrpc:"time_efficiency,omptempty"`
+	Tz             *Selection `xmlrpc:"tz,omptempty"`
 	UserId         *Many2One  `xmlrpc:"user_id,omptempty"`
 	WriteDate      *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid       *Many2One  `xmlrpc:"write_uid,omptempty"`

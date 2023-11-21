@@ -6,19 +6,23 @@ import (
 
 // BaseLanguageExport represents base.language.export model.
 type BaseLanguageExport struct {
-	LastUpdate  *Time      `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One  `xmlrpc:"create_uid,omptempty"`
-	Data        *String    `xmlrpc:"data,omptempty"`
-	DisplayName *String    `xmlrpc:"display_name,omptempty"`
-	Format      *Selection `xmlrpc:"format,omptempty"`
-	Id          *Int       `xmlrpc:"id,omptempty"`
-	Lang        *Selection `xmlrpc:"lang,omptempty"`
-	Modules     *Relation  `xmlrpc:"modules,omptempty"`
-	Name        *String    `xmlrpc:"name,omptempty"`
-	State       *Selection `xmlrpc:"state,omptempty"`
-	WriteDate   *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate              *Time      `xmlrpc:"__last_update,omptempty"`
+	CreateDate              *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid               *Many2One  `xmlrpc:"create_uid,omptempty"`
+	Data                    *String    `xmlrpc:"data,omptempty"`
+	DisplayName             *String    `xmlrpc:"display_name,omptempty"`
+	Format                  *Selection `xmlrpc:"format,omptempty"`
+	Id                      *Int       `xmlrpc:"id,omptempty"`
+	InfoBtExportDone        *String    `xmlrpc:"info_bt_export_done,omptempty"`
+	Lang                    *Selection `xmlrpc:"lang,omptempty"`
+	LangIds                 *Relation  `xmlrpc:"lang_ids,omptempty"`
+	Modules                 *Relation  `xmlrpc:"modules,omptempty"`
+	Name                    *String    `xmlrpc:"name,omptempty"`
+	PutFileToLocalModuleDir *Bool      `xmlrpc:"put_file_to_local_module_dir,omptempty"`
+	State                   *Selection `xmlrpc:"state,omptempty"`
+	UseBtExport             *Bool      `xmlrpc:"use_bt_export,omptempty"`
+	WriteDate               *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // BaseLanguageExports represents array of base.language.export model.

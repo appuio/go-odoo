@@ -8,24 +8,36 @@ import (
 type ImLivechatChannel struct {
 	LastUpdate                   *Time     `xmlrpc:"__last_update,omptempty"`
 	AreYouInside                 *Bool     `xmlrpc:"are_you_inside,omptempty"`
+	ButtonBackgroundColor        *String   `xmlrpc:"button_background_color,omptempty"`
 	ButtonText                   *String   `xmlrpc:"button_text,omptempty"`
+	ButtonTextColor              *String   `xmlrpc:"button_text_color,omptempty"`
+	CanPublish                   *Bool     `xmlrpc:"can_publish,omptempty"`
 	ChannelIds                   *Relation `xmlrpc:"channel_ids,omptempty"`
+	ChatbotScriptCount           *Int      `xmlrpc:"chatbot_script_count,omptempty"`
 	CreateDate                   *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid                    *Many2One `xmlrpc:"create_uid,omptempty"`
 	DefaultMessage               *String   `xmlrpc:"default_message,omptempty"`
 	DisplayName                  *String   `xmlrpc:"display_name,omptempty"`
+	HeaderBackgroundColor        *String   `xmlrpc:"header_background_color,omptempty"`
 	Id                           *Int      `xmlrpc:"id,omptempty"`
-	Image                        *String   `xmlrpc:"image,omptempty"`
-	ImageMedium                  *String   `xmlrpc:"image_medium,omptempty"`
-	ImageSmall                   *String   `xmlrpc:"image_small,omptempty"`
+	Image128                     *String   `xmlrpc:"image_128,omptempty"`
 	InputPlaceholder             *String   `xmlrpc:"input_placeholder,omptempty"`
+	IsPublished                  *Bool     `xmlrpc:"is_published,omptempty"`
 	Name                         *String   `xmlrpc:"name,omptempty"`
 	NbrChannel                   *Int      `xmlrpc:"nbr_channel,omptempty"`
+	RatingAvg                    *Float    `xmlrpc:"rating_avg,omptempty"`
+	RatingAvgPercentage          *Float    `xmlrpc:"rating_avg_percentage,omptempty"`
+	RatingCount                  *Int      `xmlrpc:"rating_count,omptempty"`
+	RatingIds                    *Relation `xmlrpc:"rating_ids,omptempty"`
 	RatingPercentageSatisfaction *Int      `xmlrpc:"rating_percentage_satisfaction,omptempty"`
 	RuleIds                      *Relation `xmlrpc:"rule_ids,omptempty"`
 	ScriptExternal               *String   `xmlrpc:"script_external,omptempty"`
+	TitleColor                   *String   `xmlrpc:"title_color,omptempty"`
 	UserIds                      *Relation `xmlrpc:"user_ids,omptempty"`
 	WebPage                      *String   `xmlrpc:"web_page,omptempty"`
+	WebsiteDescription           *String   `xmlrpc:"website_description,omptempty"`
+	WebsitePublished             *Bool     `xmlrpc:"website_published,omptempty"`
+	WebsiteUrl                   *String   `xmlrpc:"website_url,omptempty"`
 	WriteDate                    *Time     `xmlrpc:"write_date,omptempty"`
 	WriteUid                     *Many2One `xmlrpc:"write_uid,omptempty"`
 }

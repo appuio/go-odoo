@@ -6,18 +6,22 @@ import (
 
 // CalendarAlarm represents calendar.alarm model.
 type CalendarAlarm struct {
-	LastUpdate      *Time      `xmlrpc:"__last_update,omptempty"`
-	CreateDate      *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid       *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName     *String    `xmlrpc:"display_name,omptempty"`
-	Duration        *Int       `xmlrpc:"duration,omptempty"`
-	DurationMinutes *Int       `xmlrpc:"duration_minutes,omptempty"`
-	Id              *Int       `xmlrpc:"id,omptempty"`
-	Interval        *Selection `xmlrpc:"interval,omptempty"`
-	Name            *String    `xmlrpc:"name,omptempty"`
-	Type            *Selection `xmlrpc:"type,omptempty"`
-	WriteDate       *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid        *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate                   *Time      `xmlrpc:"__last_update,omptempty"`
+	AlarmType                    *Selection `xmlrpc:"alarm_type,omptempty"`
+	Body                         *String    `xmlrpc:"body,omptempty"`
+	CreateDate                   *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid                    *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DefaultForNewAppointmentType *Bool      `xmlrpc:"default_for_new_appointment_type,omptempty"`
+	DisplayName                  *String    `xmlrpc:"display_name,omptempty"`
+	Duration                     *Int       `xmlrpc:"duration,omptempty"`
+	DurationMinutes              *Int       `xmlrpc:"duration_minutes,omptempty"`
+	Id                           *Int       `xmlrpc:"id,omptempty"`
+	Interval                     *Selection `xmlrpc:"interval,omptempty"`
+	MailTemplateId               *Many2One  `xmlrpc:"mail_template_id,omptempty"`
+	Name                         *String    `xmlrpc:"name,omptempty"`
+	SmsTemplateId                *Many2One  `xmlrpc:"sms_template_id,omptempty"`
+	WriteDate                    *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                     *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // CalendarAlarms represents array of calendar.alarm model.

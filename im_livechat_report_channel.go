@@ -9,16 +9,27 @@ type ImLivechatReportChannel struct {
 	LastUpdate        *Time     `xmlrpc:"__last_update,omptempty"`
 	ChannelId         *Many2One `xmlrpc:"channel_id,omptempty"`
 	ChannelName       *String   `xmlrpc:"channel_name,omptempty"`
+	CountryId         *Many2One `xmlrpc:"country_id,omptempty"`
+	DayNumber         *String   `xmlrpc:"day_number,omptempty"`
+	DaysOfActivity    *Int      `xmlrpc:"days_of_activity,omptempty"`
 	DisplayName       *String   `xmlrpc:"display_name,omptempty"`
 	Duration          *Float    `xmlrpc:"duration,omptempty"`
 	Id                *Int      `xmlrpc:"id,omptempty"`
+	IsAnonymous       *Int      `xmlrpc:"is_anonymous,omptempty"`
+	IsHappy           *Int      `xmlrpc:"is_happy,omptempty"`
+	IsUnrated         *Int      `xmlrpc:"is_unrated,omptempty"`
+	IsWithoutAnswer   *Int      `xmlrpc:"is_without_answer,omptempty"`
 	LivechatChannelId *Many2One `xmlrpc:"livechat_channel_id,omptempty"`
 	NbrMessage        *Int      `xmlrpc:"nbr_message,omptempty"`
 	NbrSpeaker        *Int      `xmlrpc:"nbr_speaker,omptempty"`
 	PartnerId         *Many2One `xmlrpc:"partner_id,omptempty"`
+	Rating            *Int      `xmlrpc:"rating,omptempty"`
+	RatingText        *String   `xmlrpc:"rating_text,omptempty"`
 	StartDate         *Time     `xmlrpc:"start_date,omptempty"`
 	StartDateHour     *String   `xmlrpc:"start_date_hour,omptempty"`
+	StartHour         *String   `xmlrpc:"start_hour,omptempty"`
 	TechnicalName     *String   `xmlrpc:"technical_name,omptempty"`
+	TimeToAnswer      *Float    `xmlrpc:"time_to_answer,omptempty"`
 	Uuid              *String   `xmlrpc:"uuid,omptempty"`
 }
 

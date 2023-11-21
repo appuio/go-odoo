@@ -6,19 +6,21 @@ import (
 
 // ImLivechatChannelRule represents im_livechat.channel.rule model.
 type ImLivechatChannelRule struct {
-	LastUpdate     *Time      `xmlrpc:"__last_update,omptempty"`
-	Action         *Selection `xmlrpc:"action,omptempty"`
-	AutoPopupTimer *Int       `xmlrpc:"auto_popup_timer,omptempty"`
-	ChannelId      *Many2One  `xmlrpc:"channel_id,omptempty"`
-	CountryIds     *Relation  `xmlrpc:"country_ids,omptempty"`
-	CreateDate     *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid      *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName    *String    `xmlrpc:"display_name,omptempty"`
-	Id             *Int       `xmlrpc:"id,omptempty"`
-	RegexUrl       *String    `xmlrpc:"regex_url,omptempty"`
-	Sequence       *Int       `xmlrpc:"sequence,omptempty"`
-	WriteDate      *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid       *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate              *Time      `xmlrpc:"__last_update,omptempty"`
+	Action                  *Selection `xmlrpc:"action,omptempty"`
+	AutoPopupTimer          *Int       `xmlrpc:"auto_popup_timer,omptempty"`
+	ChannelId               *Many2One  `xmlrpc:"channel_id,omptempty"`
+	ChatbotOnlyIfNoOperator *Bool      `xmlrpc:"chatbot_only_if_no_operator,omptempty"`
+	ChatbotScriptId         *Many2One  `xmlrpc:"chatbot_script_id,omptempty"`
+	CountryIds              *Relation  `xmlrpc:"country_ids,omptempty"`
+	CreateDate              *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid               *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName             *String    `xmlrpc:"display_name,omptempty"`
+	Id                      *Int       `xmlrpc:"id,omptempty"`
+	RegexUrl                *String    `xmlrpc:"regex_url,omptempty"`
+	Sequence                *Int       `xmlrpc:"sequence,omptempty"`
+	WriteDate               *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // ImLivechatChannelRules represents array of im_livechat.channel.rule model.

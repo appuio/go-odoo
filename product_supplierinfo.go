@@ -6,28 +6,30 @@ import (
 
 // ProductSupplierinfo represents product.supplierinfo model.
 type ProductSupplierinfo struct {
-	LastUpdate          *Time     `xmlrpc:"__last_update,omptempty"`
-	CompanyId           *Many2One `xmlrpc:"company_id,omptempty"`
-	CreateDate          *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid           *Many2One `xmlrpc:"create_uid,omptempty"`
-	CurrencyId          *Many2One `xmlrpc:"currency_id,omptempty"`
-	DateEnd             *Time     `xmlrpc:"date_end,omptempty"`
-	DateStart           *Time     `xmlrpc:"date_start,omptempty"`
-	Delay               *Int      `xmlrpc:"delay,omptempty"`
-	DisplayName         *String   `xmlrpc:"display_name,omptempty"`
-	Id                  *Int      `xmlrpc:"id,omptempty"`
-	MinQty              *Float    `xmlrpc:"min_qty,omptempty"`
-	Name                *Many2One `xmlrpc:"name,omptempty"`
-	Price               *Float    `xmlrpc:"price,omptempty"`
-	ProductCode         *String   `xmlrpc:"product_code,omptempty"`
-	ProductId           *Many2One `xmlrpc:"product_id,omptempty"`
-	ProductName         *String   `xmlrpc:"product_name,omptempty"`
-	ProductTmplId       *Many2One `xmlrpc:"product_tmpl_id,omptempty"`
-	ProductUom          *Many2One `xmlrpc:"product_uom,omptempty"`
-	ProductVariantCount *Int      `xmlrpc:"product_variant_count,omptempty"`
-	Sequence            *Int      `xmlrpc:"sequence,omptempty"`
-	WriteDate           *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid            *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate            *Time     `xmlrpc:"__last_update,omptempty"`
+	CompanyId             *Many2One `xmlrpc:"company_id,omptempty"`
+	CreateDate            *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid             *Many2One `xmlrpc:"create_uid,omptempty"`
+	CurrencyId            *Many2One `xmlrpc:"currency_id,omptempty"`
+	DateEnd               *Time     `xmlrpc:"date_end,omptempty"`
+	DateStart             *Time     `xmlrpc:"date_start,omptempty"`
+	Delay                 *Int      `xmlrpc:"delay,omptempty"`
+	DisplayName           *String   `xmlrpc:"display_name,omptempty"`
+	Id                    *Int      `xmlrpc:"id,omptempty"`
+	LastPurchaseDate      *Time     `xmlrpc:"last_purchase_date,omptempty"`
+	MinQty                *Float    `xmlrpc:"min_qty,omptempty"`
+	PartnerId             *Many2One `xmlrpc:"partner_id,omptempty"`
+	Price                 *Float    `xmlrpc:"price,omptempty"`
+	ProductCode           *String   `xmlrpc:"product_code,omptempty"`
+	ProductId             *Many2One `xmlrpc:"product_id,omptempty"`
+	ProductName           *String   `xmlrpc:"product_name,omptempty"`
+	ProductTmplId         *Many2One `xmlrpc:"product_tmpl_id,omptempty"`
+	ProductUom            *Many2One `xmlrpc:"product_uom,omptempty"`
+	ProductVariantCount   *Int      `xmlrpc:"product_variant_count,omptempty"`
+	Sequence              *Int      `xmlrpc:"sequence,omptempty"`
+	ShowSetSupplierButton *Bool     `xmlrpc:"show_set_supplier_button,omptempty"`
+	WriteDate             *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid              *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // ProductSupplierinfos represents array of product.supplierinfo model.

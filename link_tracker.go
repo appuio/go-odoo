@@ -6,29 +6,28 @@ import (
 
 // LinkTracker represents link.tracker model.
 type LinkTracker struct {
-	LastUpdate            *Time     `xmlrpc:"__last_update,omptempty"`
-	CampaignId            *Many2One `xmlrpc:"campaign_id,omptempty"`
-	Code                  *String   `xmlrpc:"code,omptempty"`
-	Count                 *Int      `xmlrpc:"count,omptempty"`
-	CreateDate            *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid             *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName           *String   `xmlrpc:"display_name,omptempty"`
-	Favicon               *String   `xmlrpc:"favicon,omptempty"`
-	IconSrc               *String   `xmlrpc:"icon_src,omptempty"`
-	Id                    *Int      `xmlrpc:"id,omptempty"`
-	LinkClickIds          *Relation `xmlrpc:"link_click_ids,omptempty"`
-	LinkCodeIds           *Relation `xmlrpc:"link_code_ids,omptempty"`
-	MassMailingCampaignId *Many2One `xmlrpc:"mass_mailing_campaign_id,omptempty"`
-	MassMailingId         *Many2One `xmlrpc:"mass_mailing_id,omptempty"`
-	MediumId              *Many2One `xmlrpc:"medium_id,omptempty"`
-	RedirectedUrl         *String   `xmlrpc:"redirected_url,omptempty"`
-	ShortUrl              *String   `xmlrpc:"short_url,omptempty"`
-	ShortUrlHost          *String   `xmlrpc:"short_url_host,omptempty"`
-	SourceId              *Many2One `xmlrpc:"source_id,omptempty"`
-	Title                 *String   `xmlrpc:"title,omptempty"`
-	Url                   *String   `xmlrpc:"url,omptempty"`
-	WriteDate             *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid              *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate    *Time     `xmlrpc:"__last_update,omptempty"`
+	AbsoluteUrl   *String   `xmlrpc:"absolute_url,omptempty"`
+	CampaignId    *Many2One `xmlrpc:"campaign_id,omptempty"`
+	Code          *String   `xmlrpc:"code,omptempty"`
+	Count         *Int      `xmlrpc:"count,omptempty"`
+	CreateDate    *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid     *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName   *String   `xmlrpc:"display_name,omptempty"`
+	Id            *Int      `xmlrpc:"id,omptempty"`
+	Label         *String   `xmlrpc:"label,omptempty"`
+	LinkClickIds  *Relation `xmlrpc:"link_click_ids,omptempty"`
+	LinkCodeIds   *Relation `xmlrpc:"link_code_ids,omptempty"`
+	MassMailingId *Many2One `xmlrpc:"mass_mailing_id,omptempty"`
+	MediumId      *Many2One `xmlrpc:"medium_id,omptempty"`
+	RedirectedUrl *String   `xmlrpc:"redirected_url,omptempty"`
+	ShortUrl      *String   `xmlrpc:"short_url,omptempty"`
+	ShortUrlHost  *String   `xmlrpc:"short_url_host,omptempty"`
+	SourceId      *Many2One `xmlrpc:"source_id,omptempty"`
+	Title         *String   `xmlrpc:"title,omptempty"`
+	Url           *String   `xmlrpc:"url,omptempty"`
+	WriteDate     *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid      *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // LinkTrackers represents array of link.tracker model.

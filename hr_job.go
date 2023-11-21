@@ -7,32 +7,83 @@ import (
 // HrJob represents hr.job model.
 type HrJob struct {
 	LastUpdate               *Time      `xmlrpc:"__last_update,omptempty"`
+	Active                   *Bool      `xmlrpc:"active,omptempty"`
+	ActivitiesOverdue        *Int       `xmlrpc:"activities_overdue,omptempty"`
+	ActivitiesToday          *Int       `xmlrpc:"activities_today,omptempty"`
+	AddressId                *Many2One  `xmlrpc:"address_id,omptempty"`
+	AliasBouncedContent      *String    `xmlrpc:"alias_bounced_content,omptempty"`
+	AliasContact             *Selection `xmlrpc:"alias_contact,omptempty"`
+	AliasDefaults            *String    `xmlrpc:"alias_defaults,omptempty"`
+	AliasDomain              *String    `xmlrpc:"alias_domain,omptempty"`
+	AliasForceThreadId       *Int       `xmlrpc:"alias_force_thread_id,omptempty"`
+	AliasId                  *Many2One  `xmlrpc:"alias_id,omptempty"`
+	AliasModelId             *Many2One  `xmlrpc:"alias_model_id,omptempty"`
+	AliasName                *String    `xmlrpc:"alias_name,omptempty"`
+	AliasParentModelId       *Many2One  `xmlrpc:"alias_parent_model_id,omptempty"`
+	AliasParentThreadId      *Int       `xmlrpc:"alias_parent_thread_id,omptempty"`
+	AliasUserId              *Many2One  `xmlrpc:"alias_user_id,omptempty"`
+	AllApplicationCount      *Int       `xmlrpc:"all_application_count,omptempty"`
+	ApplicantHired           *Int       `xmlrpc:"applicant_hired,omptempty"`
+	ApplicationCount         *Int       `xmlrpc:"application_count,omptempty"`
+	ApplicationIds           *Relation  `xmlrpc:"application_ids,omptempty"`
+	CanPublish               *Bool      `xmlrpc:"can_publish,omptempty"`
+	CheckSpam                *Bool      `xmlrpc:"check_spam,omptempty"`
+	Color                    *Int       `xmlrpc:"color,omptempty"`
 	CompanyId                *Many2One  `xmlrpc:"company_id,omptempty"`
+	ContractTypeId           *Many2One  `xmlrpc:"contract_type_id,omptempty"`
 	CreateDate               *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid                *Many2One  `xmlrpc:"create_uid,omptempty"`
 	DepartmentId             *Many2One  `xmlrpc:"department_id,omptempty"`
 	Description              *String    `xmlrpc:"description,omptempty"`
 	DisplayName              *String    `xmlrpc:"display_name,omptempty"`
+	DocumentIds              *Relation  `xmlrpc:"document_ids,omptempty"`
+	DocumentsCount           *Int       `xmlrpc:"documents_count,omptempty"`
 	EmployeeIds              *Relation  `xmlrpc:"employee_ids,omptempty"`
 	ExpectedEmployees        *Int       `xmlrpc:"expected_employees,omptempty"`
+	ExtendedInterviewerIds   *Relation  `xmlrpc:"extended_interviewer_ids,omptempty"`
+	FailedMessageIds         *Relation  `xmlrpc:"failed_message_ids,omptempty"`
+	FavoriteUserIds          *Relation  `xmlrpc:"favorite_user_ids,omptempty"`
+	HasMessage               *Bool      `xmlrpc:"has_message,omptempty"`
+	HrResponsibleId          *Many2One  `xmlrpc:"hr_responsible_id,omptempty"`
 	Id                       *Int       `xmlrpc:"id,omptempty"`
-	MessageChannelIds        *Relation  `xmlrpc:"message_channel_ids,omptempty"`
+	InterviewerIds           *Relation  `xmlrpc:"interviewer_ids,omptempty"`
+	IsFavorite               *Bool      `xmlrpc:"is_favorite,omptempty"`
+	IsPublished              *Bool      `xmlrpc:"is_published,omptempty"`
+	IsSeoOptimized           *Bool      `xmlrpc:"is_seo_optimized,omptempty"`
+	JobDetails               *String    `xmlrpc:"job_details,omptempty"`
+	ManagerId                *Many2One  `xmlrpc:"manager_id,omptempty"`
+	MessageAttachmentCount   *Int       `xmlrpc:"message_attachment_count,omptempty"`
+	MessageContent           *String    `xmlrpc:"message_content,omptempty"`
 	MessageFollowerIds       *Relation  `xmlrpc:"message_follower_ids,omptempty"`
+	MessageHasError          *Bool      `xmlrpc:"message_has_error,omptempty"`
+	MessageHasErrorCounter   *Int       `xmlrpc:"message_has_error_counter,omptempty"`
+	MessageHasSmsError       *Bool      `xmlrpc:"message_has_sms_error,omptempty"`
 	MessageIds               *Relation  `xmlrpc:"message_ids,omptempty"`
 	MessageIsFollower        *Bool      `xmlrpc:"message_is_follower,omptempty"`
-	MessageLastPost          *Time      `xmlrpc:"message_last_post,omptempty"`
+	MessageMainAttachmentId  *Many2One  `xmlrpc:"message_main_attachment_id,omptempty"`
 	MessageNeedaction        *Bool      `xmlrpc:"message_needaction,omptempty"`
 	MessageNeedactionCounter *Int       `xmlrpc:"message_needaction_counter,omptempty"`
 	MessagePartnerIds        *Relation  `xmlrpc:"message_partner_ids,omptempty"`
-	MessageUnread            *Bool      `xmlrpc:"message_unread,omptempty"`
-	MessageUnreadCounter     *Int       `xmlrpc:"message_unread_counter,omptempty"`
 	Name                     *String    `xmlrpc:"name,omptempty"`
+	NewApplicationCount      *Int       `xmlrpc:"new_application_count,omptempty"`
 	NoOfEmployee             *Int       `xmlrpc:"no_of_employee,omptempty"`
 	NoOfHiredEmployee        *Int       `xmlrpc:"no_of_hired_employee,omptempty"`
 	NoOfRecruitment          *Int       `xmlrpc:"no_of_recruitment,omptempty"`
+	OldApplicationCount      *Int       `xmlrpc:"old_application_count,omptempty"`
 	Requirements             *String    `xmlrpc:"requirements,omptempty"`
-	State                    *Selection `xmlrpc:"state,omptempty"`
+	SeoName                  *String    `xmlrpc:"seo_name,omptempty"`
+	Sequence                 *Int       `xmlrpc:"sequence,omptempty"`
+	SurveyId                 *Many2One  `xmlrpc:"survey_id,omptempty"`
+	UserId                   *Many2One  `xmlrpc:"user_id,omptempty"`
+	WebsiteDescription       *String    `xmlrpc:"website_description,omptempty"`
+	WebsiteId                *Many2One  `xmlrpc:"website_id,omptempty"`
 	WebsiteMessageIds        *Relation  `xmlrpc:"website_message_ids,omptempty"`
+	WebsiteMetaDescription   *String    `xmlrpc:"website_meta_description,omptempty"`
+	WebsiteMetaKeywords      *String    `xmlrpc:"website_meta_keywords,omptempty"`
+	WebsiteMetaOgImg         *String    `xmlrpc:"website_meta_og_img,omptempty"`
+	WebsiteMetaTitle         *String    `xmlrpc:"website_meta_title,omptempty"`
+	WebsitePublished         *Bool      `xmlrpc:"website_published,omptempty"`
+	WebsiteUrl               *String    `xmlrpc:"website_url,omptempty"`
 	WriteDate                *Time      `xmlrpc:"write_date,omptempty"`
 	WriteUid                 *Many2One  `xmlrpc:"write_uid,omptempty"`
 }

@@ -6,17 +6,22 @@ import (
 
 // BaseModuleUninstall represents base.module.uninstall model.
 type BaseModuleUninstall struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	ModelIds    *Relation `xmlrpc:"model_ids,omptempty"`
-	ModuleId    *Many2One `xmlrpc:"module_id,omptempty"`
-	ModuleIds   *Relation `xmlrpc:"module_ids,omptempty"`
-	ShowAll     *Bool     `xmlrpc:"show_all,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate    *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate    *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid     *Many2One `xmlrpc:"create_uid,omptempty"`
+	CustomFields  *Int      `xmlrpc:"custom_fields,omptempty"`
+	CustomModels  *Int      `xmlrpc:"custom_models,omptempty"`
+	CustomReports *Int      `xmlrpc:"custom_reports,omptempty"`
+	CustomViews   *Int      `xmlrpc:"custom_views,omptempty"`
+	DisplayName   *String   `xmlrpc:"display_name,omptempty"`
+	Id            *Int      `xmlrpc:"id,omptempty"`
+	IsStudio      *Bool     `xmlrpc:"is_studio,omptempty"`
+	ModelIds      *Relation `xmlrpc:"model_ids,omptempty"`
+	ModuleId      *Many2One `xmlrpc:"module_id,omptempty"`
+	ModuleIds     *Relation `xmlrpc:"module_ids,omptempty"`
+	ShowAll       *Bool     `xmlrpc:"show_all,omptempty"`
+	WriteDate     *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid      *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // BaseModuleUninstalls represents array of base.module.uninstall model.

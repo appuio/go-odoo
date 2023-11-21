@@ -6,25 +6,39 @@ import (
 
 // IrModel represents ir.model model.
 type IrModel struct {
-	LastUpdate        *Time      `xmlrpc:"__last_update,omptempty"`
-	AccessIds         *Relation  `xmlrpc:"access_ids,omptempty"`
-	Count             *Int       `xmlrpc:"count,omptempty"`
-	CreateDate        *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid         *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName       *String    `xmlrpc:"display_name,omptempty"`
-	FieldId           *Relation  `xmlrpc:"field_id,omptempty"`
-	Id                *Int       `xmlrpc:"id,omptempty"`
-	Info              *String    `xmlrpc:"info,omptempty"`
-	InheritedModelIds *Relation  `xmlrpc:"inherited_model_ids,omptempty"`
-	IsMailThread      *Bool      `xmlrpc:"is_mail_thread,omptempty"`
-	Model             *String    `xmlrpc:"model,omptempty"`
-	Modules           *String    `xmlrpc:"modules,omptempty"`
-	Name              *String    `xmlrpc:"name,omptempty"`
-	State             *Selection `xmlrpc:"state,omptempty"`
-	Transient         *Bool      `xmlrpc:"transient,omptempty"`
-	ViewIds           *Relation  `xmlrpc:"view_ids,omptempty"`
-	WriteDate         *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid          *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate                *Time      `xmlrpc:"__last_update,omptempty"`
+	Abstract                  *Bool      `xmlrpc:"abstract,omptempty"`
+	AccessIds                 *Relation  `xmlrpc:"access_ids,omptempty"`
+	Count                     *Int       `xmlrpc:"count,omptempty"`
+	CreateDate                *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid                 *Many2One  `xmlrpc:"create_uid,omptempty"`
+	DisplayName               *String    `xmlrpc:"display_name,omptempty"`
+	FieldId                   *Relation  `xmlrpc:"field_id,omptempty"`
+	HideMergeAction           *Bool      `xmlrpc:"hide_merge_action,omptempty"`
+	Id                        *Int       `xmlrpc:"id,omptempty"`
+	Info                      *String    `xmlrpc:"info,omptempty"`
+	InheritedModelIds         *Relation  `xmlrpc:"inherited_model_ids,omptempty"`
+	IsMailActivity            *Bool      `xmlrpc:"is_mail_activity,omptempty"`
+	IsMailBlacklist           *Bool      `xmlrpc:"is_mail_blacklist,omptempty"`
+	IsMailThread              *Bool      `xmlrpc:"is_mail_thread,omptempty"`
+	IsMailThreadSms           *Bool      `xmlrpc:"is_mail_thread_sms,omptempty"`
+	IsMailingEnabled          *Bool      `xmlrpc:"is_mailing_enabled,omptempty"`
+	IsMergeEnabled            *Bool      `xmlrpc:"is_merge_enabled,omptempty"`
+	Model                     *String    `xmlrpc:"model,omptempty"`
+	Modules                   *String    `xmlrpc:"modules,omptempty"`
+	Name                      *String    `xmlrpc:"name,omptempty"`
+	Order                     *String    `xmlrpc:"order,omptempty"`
+	RefMergeIrActServerId     *Many2One  `xmlrpc:"ref_merge_ir_act_server_id,omptempty"`
+	RuleIds                   *Relation  `xmlrpc:"rule_ids,omptempty"`
+	State                     *Selection `xmlrpc:"state,omptempty"`
+	Transient                 *Bool      `xmlrpc:"transient,omptempty"`
+	ViewIds                   *Relation  `xmlrpc:"view_ids,omptempty"`
+	WebsiteFormAccess         *Bool      `xmlrpc:"website_form_access,omptempty"`
+	WebsiteFormDefaultFieldId *Many2One  `xmlrpc:"website_form_default_field_id,omptempty"`
+	WebsiteFormKey            *String    `xmlrpc:"website_form_key,omptempty"`
+	WebsiteFormLabel          *String    `xmlrpc:"website_form_label,omptempty"`
+	WriteDate                 *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                  *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // IrModels represents array of ir.model model.

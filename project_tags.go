@@ -6,15 +6,19 @@ import (
 
 // ProjectTags represents project.tags model.
 type ProjectTags struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	Color       *Int      `xmlrpc:"color,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	Name        *String   `xmlrpc:"name,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate              *Time     `xmlrpc:"__last_update,omptempty"`
+	AvailableForAllProjects *Bool     `xmlrpc:"available_for_all_projects,omptempty"`
+	AvailableProjectIds     *Relation `xmlrpc:"available_project_ids,omptempty"`
+	Color                   *Int      `xmlrpc:"color,omptempty"`
+	CreateDate              *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid               *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName             *String   `xmlrpc:"display_name,omptempty"`
+	Id                      *Int      `xmlrpc:"id,omptempty"`
+	Name                    *String   `xmlrpc:"name,omptempty"`
+	ProjectIds              *Relation `xmlrpc:"project_ids,omptempty"`
+	TaskIds                 *Relation `xmlrpc:"task_ids,omptempty"`
+	WriteDate               *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid                *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // ProjectTagss represents array of project.tags model.

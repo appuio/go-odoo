@@ -6,19 +6,31 @@ import (
 
 // SaleAdvancePaymentInv represents sale.advance.payment.inv model.
 type SaleAdvancePaymentInv struct {
-	LastUpdate           *Time      `xmlrpc:"__last_update,omptempty"`
-	AdvancePaymentMethod *Selection `xmlrpc:"advance_payment_method,omptempty"`
-	Amount               *Float     `xmlrpc:"amount,omptempty"`
-	Count                *Int       `xmlrpc:"count,omptempty"`
-	CreateDate           *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid            *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DepositAccountId     *Many2One  `xmlrpc:"deposit_account_id,omptempty"`
-	DepositTaxesId       *Relation  `xmlrpc:"deposit_taxes_id,omptempty"`
-	DisplayName          *String    `xmlrpc:"display_name,omptempty"`
-	Id                   *Int       `xmlrpc:"id,omptempty"`
-	ProductId            *Many2One  `xmlrpc:"product_id,omptempty"`
-	WriteDate            *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid             *Many2One  `xmlrpc:"write_uid,omptempty"`
+	LastUpdate                   *Time      `xmlrpc:"__last_update,omptempty"`
+	AdvancePaymentMethod         *Selection `xmlrpc:"advance_payment_method,omptempty"`
+	Amount                       *Float     `xmlrpc:"amount,omptempty"`
+	CompanyId                    *Many2One  `xmlrpc:"company_id,omptempty"`
+	Count                        *Int       `xmlrpc:"count,omptempty"`
+	CreateDate                   *Time      `xmlrpc:"create_date,omptempty"`
+	CreateUid                    *Many2One  `xmlrpc:"create_uid,omptempty"`
+	CurrencyId                   *Many2One  `xmlrpc:"currency_id,omptempty"`
+	DateEndInvoiceMeteredUsage   *Time      `xmlrpc:"date_end_invoice_metered_usage,omptempty"`
+	DateEndInvoiceTimesheet      *Time      `xmlrpc:"date_end_invoice_timesheet,omptempty"`
+	DateStartInvoiceMeteredUsage *Time      `xmlrpc:"date_start_invoice_metered_usage,omptempty"`
+	DateStartInvoiceTimesheet    *Time      `xmlrpc:"date_start_invoice_timesheet,omptempty"`
+	DeductDownPayments           *Bool      `xmlrpc:"deduct_down_payments,omptempty"`
+	DepositAccountId             *Many2One  `xmlrpc:"deposit_account_id,omptempty"`
+	DepositTaxesId               *Relation  `xmlrpc:"deposit_taxes_id,omptempty"`
+	DisplayName                  *String    `xmlrpc:"display_name,omptempty"`
+	FixedAmount                  *Float     `xmlrpc:"fixed_amount,omptempty"`
+	HasDownPayments              *Bool      `xmlrpc:"has_down_payments,omptempty"`
+	Id                           *Int       `xmlrpc:"id,omptempty"`
+	InvoicingMeteredUsageEnabled *Bool      `xmlrpc:"invoicing_metered_usage_enabled,omptempty"`
+	InvoicingTimesheetEnabled    *Bool      `xmlrpc:"invoicing_timesheet_enabled,omptempty"`
+	ProductId                    *Many2One  `xmlrpc:"product_id,omptempty"`
+	SaleOrderIds                 *Relation  `xmlrpc:"sale_order_ids,omptempty"`
+	WriteDate                    *Time      `xmlrpc:"write_date,omptempty"`
+	WriteUid                     *Many2One  `xmlrpc:"write_uid,omptempty"`
 }
 
 // SaleAdvancePaymentInvs represents array of sale.advance.payment.inv model.

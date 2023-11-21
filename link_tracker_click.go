@@ -6,20 +6,19 @@ import (
 
 // LinkTrackerClick represents link.tracker.click model.
 type LinkTrackerClick struct {
-	LastUpdate            *Time     `xmlrpc:"__last_update,omptempty"`
-	ClickDate             *Time     `xmlrpc:"click_date,omptempty"`
-	CountryId             *Many2One `xmlrpc:"country_id,omptempty"`
-	CreateDate            *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid             *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName           *String   `xmlrpc:"display_name,omptempty"`
-	Id                    *Int      `xmlrpc:"id,omptempty"`
-	Ip                    *String   `xmlrpc:"ip,omptempty"`
-	LinkId                *Many2One `xmlrpc:"link_id,omptempty"`
-	MailStatId            *Many2One `xmlrpc:"mail_stat_id,omptempty"`
-	MassMailingCampaignId *Many2One `xmlrpc:"mass_mailing_campaign_id,omptempty"`
-	MassMailingId         *Many2One `xmlrpc:"mass_mailing_id,omptempty"`
-	WriteDate             *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid              *Many2One `xmlrpc:"write_uid,omptempty"`
+	LastUpdate     *Time     `xmlrpc:"__last_update,omptempty"`
+	CampaignId     *Many2One `xmlrpc:"campaign_id,omptempty"`
+	CountryId      *Many2One `xmlrpc:"country_id,omptempty"`
+	CreateDate     *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid      *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName    *String   `xmlrpc:"display_name,omptempty"`
+	Id             *Int      `xmlrpc:"id,omptempty"`
+	Ip             *String   `xmlrpc:"ip,omptempty"`
+	LinkId         *Many2One `xmlrpc:"link_id,omptempty"`
+	MailingTraceId *Many2One `xmlrpc:"mailing_trace_id,omptempty"`
+	MassMailingId  *Many2One `xmlrpc:"mass_mailing_id,omptempty"`
+	WriteDate      *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid       *Many2One `xmlrpc:"write_uid,omptempty"`
 }
 
 // LinkTrackerClicks represents array of link.tracker.click model.

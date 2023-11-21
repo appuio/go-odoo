@@ -7,6 +7,7 @@ import (
 // CalendarEventType represents calendar.event.type model.
 type CalendarEventType struct {
 	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
+	Color       *Int      `xmlrpc:"color,omptempty"`
 	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
 	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
 	DisplayName *String   `xmlrpc:"display_name,omptempty"`
