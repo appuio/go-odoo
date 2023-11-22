@@ -220,6 +220,8 @@ type ResPartner struct {
 	UserLivechatUsername               *String    `xmlrpc:"user_livechat_username,omptempty"`
 	Vat                                *String    `xmlrpc:"vat,omptempty"`
 	VisitorIds                         *Relation  `xmlrpc:"visitor_ids,omptempty"`
+	VshnControlApiInflight             *String    `xmlrpc:"vshn_control_api_inflight,omptempty"`
+	VshnControlApiMetaStatus           *String    `xmlrpc:"vshn_control_api_meta_status,omptempty"`
 	Website                            *String    `xmlrpc:"website,omptempty"`
 	WebsiteDescription                 *String    `xmlrpc:"website_description,omptempty"`
 	WebsiteId                          *Many2One  `xmlrpc:"website_id,omptempty"`
